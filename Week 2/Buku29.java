@@ -1,9 +1,9 @@
-import java.util.Scanner;
+
 public class Buku29 {
     static String judul, pengarang;
     static int halaman, stok, harga;
     
-    static void tampilInformasi(){
+     void tampilInformasi(){
         System.out.println("Judul: "+ judul);
         System.out.println("Pengarang: "+ pengarang);
         System.out.println("Jumlah Halaman: "+ halaman);
@@ -11,7 +11,7 @@ public class Buku29 {
         System.out.println("Harga: Rp " + harga);
 
     }
-   static  void terjual(int jml) {
+    void terjual(int jml) {
     if (stok > 0) {
         stok -= jml;
     }else{
@@ -24,6 +24,17 @@ public class Buku29 {
     }
     void gantiHarga(int hrg){
         harga = hrg;
+    }
+    public Buku29(){
+
+    }
+    public Buku29(String jud,String pg,int hal, int stok, int har){
+        judul = jud;
+        pengarang = pg;
+        halaman = hal;
+        this.stok = stok;
+        harga = har;
+
     }
 
    
