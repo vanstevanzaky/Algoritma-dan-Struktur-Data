@@ -1,7 +1,7 @@
 
 public class Buku29 {
-    static String judul, pengarang;
-    static int halaman, stok, harga;
+     String judul, pengarang;
+     int halaman, stok, harga;
     
      void tampilInformasi(){
         System.out.println("Judul: "+ judul);

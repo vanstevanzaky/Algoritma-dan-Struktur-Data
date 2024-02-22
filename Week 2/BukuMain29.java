@@ -19,6 +19,9 @@ public class BukuMain29 {
             bk2.terjual(11);
             bk2.tampilInformasi();
 
+            Buku29 bukuStevanZakyS = new Buku29("Lepas", "Stevan Zaky", 80, 10, 80000);
+            bukuStevanZakyS.tampilInformasi();
+
 
     }
     
