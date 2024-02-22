@@ -25,6 +25,24 @@ public class Buku29 {
     void gantiHarga(int hrg){
         harga = hrg;
     }
+
+    int hitungHargaTotal(){
+        return harga * stok;
+    }
+    int hitungDiskon(){
+        int hrgTotal = hitungHargaTotal();
+        if (hrgTotal > 150000) {
+            return (int) (0.12 * hrgTotal); // Diskon 12%
+        } else if (hrgTotal >= 75000 && hrgTotal <= 150000) {
+            return (int) (0.05 * hrgTotal); // Diskon 5%
+        } else {
+            return 0; // Tidak ada diskon
+        }
+    }
+    int hitungHargaBayar(){
+        return hitungHargaTotal() - hitungDiskon();
+    }
+    
     public Buku29(){
 
     }
