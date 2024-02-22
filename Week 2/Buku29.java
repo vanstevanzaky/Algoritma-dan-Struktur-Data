@@ -34,14 +34,5 @@ public class Buku29 {
         halaman = hal;
         this.stok = stok;
         harga = har;
-
-    }
-
-   
-    
-
-
-
-
-    
+    }   
 }
