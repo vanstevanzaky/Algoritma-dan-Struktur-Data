@@ -4,12 +4,18 @@ public class Buku29 {
      int halaman, stok, harga;
     
      void tampilInformasi(){
+        
+        System.out.println("=========================");
+        System.out.println("");
         System.out.println("Judul: "+ judul);
         System.out.println("Pengarang: "+ pengarang);
         System.out.println("Jumlah Halaman: "+ halaman);
         System.out.println("Sisa stok: "+ stok);
         System.out.println("Harga: Rp " + harga);
-
+        System.out.println("Harga total: Rp"+ hitungHargaTotal());
+        System.out.println("Diskon: "+ hitungDiskon());
+        System.out.println("Harga Bayar: "+ hitungHargaBayar());
+        
     }
     void terjual(int jml) {
     if (stok > 0) {
@@ -22,8 +28,9 @@ public class Buku29 {
     void restock(int n){
         stok+= n;
     }
-    void gantiHarga(int hrg){
+    int gantiHarga(int hrg){
         harga = hrg;
+        return harga;
     }
 
     int hitungHargaTotal(){
