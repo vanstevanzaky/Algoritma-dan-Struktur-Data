@@ -1,12 +1,7 @@
 import java.util.Scanner;
-/**
- * praktikumAarray29
- */
 public class praktikumArray29 {
-
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-
         String[] namaMataKuliah = new String[10];
         int[] bobotSks = new int[10];
         String[] nilaiHuruf = new String[10];
@@ -14,7 +9,6 @@ public class praktikumArray29 {
         double[] nilaiSetara= new double[10];
         int jumlahMataKuliah = 0, totalSks = 0;
         double ipSemester = 0.0;
-
         do {
             System.out.print("Inputkan Nama Matakuliah: ");
             namaMataKuliah[jumlahMataKuliah] = input.nextLine();
@@ -29,9 +23,6 @@ public class praktikumArray29 {
             System.out.print("Lanjut input? (iya/tidak): ");
             lanjut = input.nextLine();
         } while (lanjut.equalsIgnoreCase("iya") && jumlahMataKuliah < namaMataKuliah.length);
-
-        
-        
         for (int i = 0; i < jumlahMataKuliah; i++) {
             switch (nilaiHuruf[i]) {
                 case "A":
@@ -68,28 +59,17 @@ public class praktikumArray29 {
             }
             ipSemester += nilaiSetara[i]* bobotSks[i];
             totalSks += bobotSks[i];
-
-
         }
-         
          System.out.println("\n--- Hasil Perhitungan IP Semester ---");
          System.out.printf("%-40s %-10s \t%5s\n", "MATAKULIAH","NILAI HURUF","NILAI SETARA");
          for (int i = 0; i < jumlahMataKuliah; i++) {
              System.out.printf("%-40s %-10s \t%5s\n", namaMataKuliah[i], nilaiHuruf[i], nilaiSetara[i]);
          }
-         
         if (totalSks >0) {
             ipSemester /= totalSks;
             System.out.println("IP Semester: "+ ipSemester);
         } else {
             System.out.println("Tidak ada data matakuliah. ");
         }
-
-        
-
-        
-
-
-
     }
 }
