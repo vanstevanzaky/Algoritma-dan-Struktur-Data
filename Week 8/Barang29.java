@@ -1,6 +1,3 @@
-/**
- * Barang29
- */
 public class Barang29 {
     int kode;
     String nama, kategori;
