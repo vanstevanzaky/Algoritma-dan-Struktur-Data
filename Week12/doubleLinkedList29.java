@@ -77,17 +77,6 @@ public class doubleLinkedList29 {
             System.out.println("Linked List Kosong");
         }
     }
-    public void removeFirst() throws Exception{
-        if (isEmpty()) {
-            throw new Exception("Linked List masih kosong, tidak dapat dihapus!");
-        } else if (size == 1) {
-            removeLast();
-        } else {
-            head = head.next;
-            head.prev = null;
-            size--;
-        }
-    }
     
 
 }
