@@ -33,7 +33,7 @@ public class Utama29 {
                     gudang.tambahBarang(barangBaru);
                     break;
                 case 2:
-                    gudang.ambilBarang();
+                    gudang.ambilBarang() ;
                     break;
                 case 3:
                     gudang.tampilkanBarang();
