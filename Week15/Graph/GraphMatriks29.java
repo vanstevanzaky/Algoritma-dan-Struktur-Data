@@ -1,10 +1,10 @@
 package Graph;
 
-public class GraphMatriks24 {
+public class GraphMatriks29 {
     int vertex;
     int [][] matriks;
 
-    public GraphMatriks24(int v) {
+    public GraphMatriks29(int v) {
         vertex = v;
         matriks = new int[v][v];
     }
