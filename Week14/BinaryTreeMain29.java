@@ -11,11 +11,12 @@ public class BinaryTreeMain29 {
         bt.add(9);
         bt.add(10);
         bt.add(15);
+        bt.recursion(72);
 
-        System.out.print("PreOrder Traversal : ");
+        System.out.print("PreOrder Traversal  : ");
         bt.traversePreOrder(bt.root);
         System.out.println("");
-        System.out.print("InOrder Traversal : ");
+        System.out.print("InOrder Traversal   : ");
         bt.traverseInOrder(bt.root);
         System.out.println("");
         System.out.print("PostOrder Traversal : ");
@@ -27,5 +28,23 @@ public class BinaryTreeMain29 {
         System.out.print("PreOrder Traversal : ");
         bt.traversePreOrder(bt.root);
         System.out.println("");
+
+        bt.traversePreOrder(bt.root);
+        System.out.println("");
+        System.out.println("-------------------");
+        System.out.println("Data terbesar : ");
+        bt.tampilMax();
+        System.out.println("-------------------");
+        System.out.println("Data terkecil : ");
+        bt.tampilMin();
+        System.out.println("");
+
+        System.out.println("------------------------");
+        System.out.println("Data yang ada di leaf : ");
+        bt.tampilLeaf(bt.root);
+        System.out.println();
+
+        System.out.println("Jumlah data yang ada di leaf : " + bt.jumlahLeaf());
     }
+
 }

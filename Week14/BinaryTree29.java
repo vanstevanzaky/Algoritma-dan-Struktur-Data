@@ -159,5 +159,76 @@ public class BinaryTree29 {
             }
         }
     }
+    void recursion(int key) {
+        root = recursion(root, key);
+    }
+    public Node29 recursion(Node29 current, int data) {
+        if (current == null) {
+            return new Node29(data);
+        } else if (data < current.data) {
+            current.left = recursion(current.left, data);
+        } else if (data > current.data) {
+            current.right = recursion(current.right, data);
+        } else {
+            return current;
+        }
+        return current;
+    }
+    void tampilMax() {
+        Node29 current = root;
+        while (current.right != null) {
+            current = current.right;
+        }
+        System.out.println(current.data);
+    }
+
+    void tampilMin() {
+        Node29 current = root;
+        while (current.left != null) {
+            current = current.left;
+        }
+        System.out.println(current.data);
+    }
+
+    void tampilLeaf(Node29 root) {
+        if (root == null) {
+            return;
+        }
+        if (root.left == null && root.right == null) {
+            System.out.print(" " + root.data);
+            return;
+        }
+        if (root.left != null) {
+            tampilLeaf(root.left);
+        }
+        if (root.right != null) {
+            tampilLeaf(root.right);
+        }
+    }
+
+    int jumlahLeaf() {
+        return jumlahLeaf(root);
+    }
+    int jumlahLeaf(Node29 Node) {
+        if (Node == null) {
+            return 0;
+        }
+        if (Node.left == null && Node.right == null) {
+            return 1;
+        } else {
+            return jumlahLeaf(Node.left) + jumlahLeaf(Node.right);
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
 
 }

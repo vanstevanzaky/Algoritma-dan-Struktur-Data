@@ -8,5 +8,16 @@ public class BinaryTreeArrayMain29 {
         System.out.print("\nInOrder Traversal : ");
         bta.traverseInOrder(0);
         System.out.println("\n");
+        
+        System.out.println("---------------------------");
+        bta.add(45);
+        bta.add(25);
+        System.out.println("Method Traverse Pre Order");
+        bta.traversePreOrder(0);
+        System.out.println();
+        System.out.println("Method Traverse Post Order");
+        bta.traversePostOrder(0);
+        System.out.println();
+
     }
 }
